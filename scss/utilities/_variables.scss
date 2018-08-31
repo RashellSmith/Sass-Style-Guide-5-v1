@@ -1,0 +1,40 @@
+// Screen Sizes
+$sm-screens: 480px;
+$lg-screens: 1400px;
+$color-primary: navy blue;
+
+
+// Font Stacks
+$font-url--google    :"https://fonts.googleapis.com/css?family=Raleway";
+$font-stack-primary  : 'raleway', sans-serif;
+$font-stack-secondary: sans-serif;
+
+
+// Font Weights
+$font-weight--thin       : 100;
+$font-weight--light      : 300;
+$font-weight--medium     : 400;
+$font-weight--bold       : 700;
+$font-weight--ultra-bold : 900;
+
+// Descriptive Base Colors
+$white : #fff;
+$black : #0b0b0b;
+$grey  : #797e83;
+
+$fountain-blue  : #52bab3;
+$emerald        : #5ece7f;
+$sunglo         : #e67478;
+$coral          : #ff784f;
+$purple-majesty : #9279c3;
+$scooter        : #39add1;
+
+// Color Usage
+$color-primary   :$fountain-blue;
+$color-secondary :$scooter;
+$color-accent    :$emerald;
+$color-shadow    :rbg($black,.2);
+
+//Text
+$base__font-size: 16px;
+$base__line     : 24px;
