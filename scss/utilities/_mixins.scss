@@ -1,3 +1,5 @@
+// media queries
+
 @mixin small-screens{
   @media only screen and ($sm-screens) {
 
@@ -13,12 +15,10 @@
   display: flex;
   justify-content: center;
 }
-//   $disp:flex,
-//   $dir: null,
-//   $wrap: null,
-//   $just: null){
-//   display:$disp;
-//   flex-direction: $dir;
-//   flex-wrap:$wrap ;
-//   justify-content:$just ;
-// }
+@mixin bg-colors($map) {
+  @each $theme, $color in $map{
+  &--#{$theme} {
+    background-color: $color;
+  }
+}
+}
