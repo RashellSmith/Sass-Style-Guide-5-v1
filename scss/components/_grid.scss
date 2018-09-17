@@ -1,0 +1,9 @@
+//==================================
+//Layout styles
+//==================================
+
+.container{
+  font-size: $base__font-size;
+  light-height: ($base__line/$base__font-size);
+  font-family: $font-stack-primary;
+}
