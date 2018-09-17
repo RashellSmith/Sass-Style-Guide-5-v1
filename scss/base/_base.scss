@@ -4,9 +4,26 @@
 }
 
 ul {
+  list-style: none;
 
 }
+.container{
+  font-size: $base__font-siz;
+  light-height: ($base__line/$base__font-size);
+  font-family: $font-stack-primary;
+}
 
+h1{
+  font-weight: $font-weight--light;
+  font-size: em(42px);
+  line-height:(46px / 42px);
+  margin-bottom: em(70px,42px);
+}
+header{
+  text-align:center;
+  padding: em(48px) 0;
+}
 p {
+  color: palette(grey,x-dark);
 
 }

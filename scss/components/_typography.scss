@@ -1,0 +1,15 @@
+//Headlines
+.headline{
+  &--primary{
+    @extend %headline--primary;
+  }
+  &--secondary{
+    @extend %headline--primary;
+
+  }
+}
+
+
+//.headline--secondary{
+//  font-family: $font-stack-tertiary;
+//}

@@ -1,0 +1,12 @@
+//Headlines
+
+
+ %headline--primary{
+   font-family: $font-stack-primary;
+   color: palette(black,base);
+
+ }
+ %headline--secondary{
+   font-family: $font-stack-tertiary;
+   color: palette(grey, light);
+ }
