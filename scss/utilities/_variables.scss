@@ -7,12 +7,20 @@ $sm-screens: 480px;
 $lg-screens: 1400px;
 $color-primary: navy blue;
 
+// Media query breakpoints
+$brk-narrow: "(max-width: 768px)";
+$brk-wide  : "(max-width:1024px)";
+
+//breakpoints
+$breakpoint-sm : 1px;
+$breakpoint-md : 768px;
+$breakpoint-lg : 1024px;
 
 // Font Stacks
-$font-url--google    :"https://fonts.googleapis.com/css?family=Raleway";
-$font-stack-primary  : "Raleway","Lucida Grande", Helvetica, sans-serif;
-$font-stack-secondary: "Lucida Grande", Helvetica, sans-serif;
-$font-stack-tertiary : "Raleway Dots","Raleway","Lucida Grande", Helvetica, sans-serif;
+$font-url--google    :"https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Subrayada";
+$font-stack-primary  : "Montserrat","Raleway","Lucida Grande", Helvetica, sans-serif;
+$font-stack-secondary: "Raleway","Lucida Grande", Helvetica, sans-serif;
+$font-stack-tertiary : "Montserrat Subrayada","Raleway", sans-serif;
 
 
 // Font Weights
@@ -41,22 +49,21 @@ $color-accent    :$emerald;
 $color-shadow    :rbg($black,.2);
 
 // color Palette Modifiers
-  $palettes:(
-    grey: (
-      xx-light : lighten($grey, 45%),
-      x-light  : lighten($grey, 35%),
-      light    : lighten($grey, 12%),
-      base     : $grey,
-      dark     : darken($grey,8%),
-      x-dark   : darken($grey, 16%)
-    ),
-    black:(
-      lighten : lighten($black,10%),
-      base    : $black,
-      dark    : darken($black,10%)
-    )
-
-  );
+$palettes: (
+  grey: (
+    xx-light : lighten($grey, 43%),
+    x-light  : lighten($grey, 35%),
+    light    : lighten($grey, 12%),
+    base     : $grey,
+    dark     : darken($grey, 8%),
+    x-dark   : darken($grey, 16%)
+  ),
+	black: (
+		light    : lighten($black, 10%),
+		base     : $black,
+		dark     : darken($black, 10%)
+	)
+);
 
 
 //UI Colors
@@ -72,3 +79,22 @@ $ui-colors:(
 //Text
 $base__font-size: 16px;
 $base__line     : 24px;
+$letter-space   :1px;
+
+//borde radius
+$br--default :.4em;
+$br--round   :50%;
+
+// Transitions
+
+$trns-duration   : .3s;
+
+// Grid
+
+$g-col-width    : 65px;
+$g-gutter-width : 20px;
+$g-col-count    : 12;
+$g-cont-max-w   : 1050px;
+
+// flex
+$flex: flex;

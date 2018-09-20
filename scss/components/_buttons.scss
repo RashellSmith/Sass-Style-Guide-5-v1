@@ -1,3 +1,15 @@
 .btn{
+
   @include bg-colors($ui-colors);
+  &--default,
+  &--success,
+  &--error,
+  &--warning,
+  &--info{
+    @extend %btn;
+    width: 90%;
+    height: 50px;
+    margin: 20px;
+    color:$white;
+  }
 }

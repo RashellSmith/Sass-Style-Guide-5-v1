@@ -5,20 +5,14 @@
 
 ul {
   list-style: none;
-
+  text-decoration: none;
+//TODO: fix text decoration
 }
 
-h1{
-  font-weight: $font-weight--light;
-  font-size: em(42px);
-  line-height:(46px / 42px);
-  margin-bottom: em(70px,42px);
-}
-header{
-  text-align:center;
-  padding: em(48px) 0;
-}
 p {
   color: palette(grey,x-dark);
-
+  font-size: em(18px);
+  line-height: (27px/ 18px);
+  margin: 0 0 em(30px,18px);
+  font-weight: $font-weight--light;
 }

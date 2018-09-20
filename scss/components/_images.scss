@@ -1,0 +1,15 @@
+//Images
+.img{
+  margin-bottom: em(24px);
+  max-width: 100%;
+  height:auto;
+  &--frame {
+    border: 1px solid palette(grey,x-light);
+    padding: em(12px);
+  }
+  &--avatar{
+    display:block;
+    border-radius:$br--round;
+
+  }
+}

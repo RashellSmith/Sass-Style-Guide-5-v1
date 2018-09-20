@@ -7,3 +7,67 @@
   light-height: ($base__line/$base__font-size);
   font-family: $font-stack-primary;
 }
+
+.grid__col{
+  &--3{
+    @extend %center-align;
+    @extend %panel-default;
+  }
+  &--9{
+    @extend %center-align;
+    @extend %panel-default;
+  }
+ }
+ // Calculate grid columns
+@include mq(medium){
+
+ @for $i from 1 through $g-col-count {
+
+   $context: g-context($g-col-width, $g-col-count, $g-gutter-width) !global;
+   $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
+
+   // Generate column modifier classes
+   .grid__col--#{$i} {
+     width: percentage($target / $context);
+   }
+ }
+}
+//column styles
+[class^="grid__col--"]{
+  @include mq(small){
+    margin-top:em(12px);
+    margin-bottom:em(12px);
+  }
+  @include mq(medium){
+    @include doubly(percentage($g-gutter-width/ $context));
+    float:left;
+    min-height: 1px;
+    padding-left:10px;
+    padding-right:10px;
+    &:last-of-type{
+      float:right;
+    }
+  }
+}
+
+//grid containers
+.grid{
+  @extend %clearfix;
+  width:90%;
+  // Make nested grid 100%
+  [class*="grid__col--"]> & {
+    width: 100%;
+  }
+  //set a max-width for grid containers
+  @include mq(large){
+    max-width: $g-cont-max-w;
+  }
+}
+
+.grid__row{
+  @include grid($flex){
+    @extend %btn;
+    color: $palettes(black);
+    flex-direction: column;
+  }
+}

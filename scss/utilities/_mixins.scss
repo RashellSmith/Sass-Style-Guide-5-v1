@@ -1,19 +1,28 @@
 // =================================================
 //  Media Queries
 //==================================================
+ @mixin mq($break){
+   @if $break == "small"{
+     @media(min-width: $breakpoint-sm) and (max-width: $breakpoint-md){
+       @content;
+     }
+   }
+   @else if $break == "medium"{
+     @media (min-width: $breakpoint-md +1){
+       @content;
+     }
+   }
+   @else if $break == "large" {
+     @media(min-width: $breakpoint-lg){
+       @content;
+     }
+   }
+   @else {
+     @error "No value could be retrieved for `#{$break}` "
+   }
+ }
 
-@mixin small-screens{
-  @media only screen and ($sm-screens) {
-
-}
-}
-@mixin small-screens{
-  @media only screen and ($lg-screens) {
-
-}
-}
-// create a flex container
-@mixin flexbox{
+@mixin flex{
   display: flex;
   justify-content: center;
 }
@@ -26,3 +35,33 @@
   }
 }
 }
+@mixin grid($flex) {
+    @if $flex {
+        @include flex;
+    } @else {
+        display: block;
+    }
+    @content
+}
+//Bem Selectors
+@mixin e($element){
+  &__#{$element}{
+    @content;
+  }
+}
+@mixin m($modifier){
+  &--#{$modifier}
+  {
+    @content;
+  }
+}
+
+//adjacent sibling margins
+@mixin doubly($margin: 1em){
+  & + &{
+    margin-left: $margin;
+    @content;
+  }
+}
+
+// grid columns
