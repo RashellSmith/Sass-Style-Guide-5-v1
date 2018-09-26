@@ -1,11 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Subrayada");
-/* line 7, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/utilities/_placeholders.scss */
-.grid::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 /* line 19, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/utilities/_placeholders.scss */
 .headline--primary {
   font-family: "Montserrat", "Raleway", "Lucida Grande", Helvetica, sans-serif;
@@ -34,34 +27,41 @@
   }
 }
 
-/* line 45, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/utilities/_placeholders.scss */
+@media (min-width: 1024px) {
+  /* line 45, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/utilities/_placeholders.scss */
+  .img--logo {
+    display: inline-block;
+    margin: 0 0.75em;
+  }
+}
+
+/* line 52, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/utilities/_placeholders.scss */
 .nav__item a {
+  display: block;
   font-size: 1.125em;
   font-weight: 300;
-  display: block;
   padding: 0.5em;
   border-bottom: 1px solid transparent;
   margin: auto;
-  text-decoration: none;
-  font: "Montserrat", "Raleway", "Lucida Grande", Helvetica, sans-serif;
+  font-family: "Montserrat", "Raleway", "Lucida Grande", Helvetica, sans-serif;
 }
 
 @media (min-width: 1px) and (max-width: 768px) {
-  /* line 45, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/utilities/_placeholders.scss */
+  /* line 52, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/utilities/_placeholders.scss */
   .nav__item a {
     padding-top: 0.77778em;
     padding-bottom: 0.77778em;
   }
 }
 
-/* line 59, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/utilities/_placeholders.scss */
+/* line 65, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/utilities/_placeholders.scss */
 .nav__item a:hover {
   color: #fff;
   background-color: #52bab3;
 }
 
-/* line 67, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/utilities/_placeholders.scss */
-.btn--default, .btn--success, .btn--error, .btn--warning, .btn--info, .form__btn, .grid__row {
+/* line 73, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/utilities/_placeholders.scss */
+.btn--default, .btn--success, .btn--error, .btn--warning, .btn--info, .form__btn {
   padding: 15px 30px;
   border: 0;
   border-radius: 0.4em;
@@ -73,29 +73,38 @@
   display: block;
 }
 
-/* line 77, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/utilities/_placeholders.scss */
-.btn--default:hover, .btn--success:hover, .btn--error:hover, .btn--warning:hover, .btn--info:hover, .form__btn:hover, .grid__row:hover {
+/* line 83, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/utilities/_placeholders.scss */
+.btn--default:hover, .btn--success:hover, .btn--error:hover, .btn--warning:hover, .btn--info:hover, .form__btn:hover {
   opacity: .75;
 }
 
-/* line 80, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/utilities/_placeholders.scss */
-.btn--default:active, .btn--success:active, .btn--error:active, .btn--warning:active, .btn--info:active, .form__btn:active, .grid__row:active {
+/* line 86, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/utilities/_placeholders.scss */
+.btn--default:active, .btn--success:active, .btn--error:active, .btn--warning:active, .btn--info:active, .form__btn:active {
   opacity: initial;
 }
 
-/* line 86, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/utilities/_placeholders.scss */
-.grid__col--3, .grid__col--9 {
-  padding-top: 1.875em;
-  padding-bottom: 1.25em;
+/* line 92, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/utilities/_placeholders.scss */
+--3.theme__colors, --4.theme__colors, --6.theme__colors, --5.theme__colors, --7.theme__colors, --8.theme__colors, --9.theme__colors, --12.theme__colors {
+  border-radius: 0.4em;
+  width: 100%;
+  height: 50px;
+  margin: 20px;
 }
 
-/* line 95, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/utilities/_placeholders.scss */
-.grid__col--3, .grid__col--9 {
+/* line 108, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/utilities/_placeholders.scss */
+--3.theme__colors, --4.theme__colors, --6.theme__colors, --5.theme__colors, --7.theme__colors, --8.theme__colors, --9.theme__colors, --12.theme__colors, .nav__item {
   text-align: center;
 }
 
-/* line 101, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/utilities/_placeholders.scss */
-.nav__item {
+/* line 112, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/utilities/_placeholders.scss */
+.btn--default, .btn--success, .btn--error, .btn--warning, .btn--info {
+  width: 90%;
+  height: 50px;
+  margin: 20px;
+}
+
+/* line 119, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/utilities/_placeholders.scss */
+.container, .img {
   float: none;
   margin-left: auto;
   margin-right: auto;
@@ -149,9 +158,6 @@ p {
 
 /* line 4, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_buttons.scss */
 .btn--default, .btn--success, .btn--error, .btn--warning, .btn--info {
-  width: 90%;
-  height: 50px;
-  margin: 20px;
   color: #fff;
 }
 
@@ -190,110 +196,33 @@ p {
 
 /* line 5, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_grid.scss */
 .container {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  flex-direction: column;
   font-size: 16px;
   light-height: 1.5;
   font-family: "Montserrat", "Raleway", "Lucida Grande", Helvetica, sans-serif;
 }
 
-@media (min-width: 769px) {
-  /* line 30, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_grid.scss */
-  .grid__col--1 {
-    width: 6.5%;
-  }
-  /* line 30, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_grid.scss */
-  .grid__col--2 {
-    width: 15%;
-  }
-  /* line 30, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_grid.scss */
-  .grid__col--3 {
-    width: 23.5%;
-  }
-  /* line 30, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_grid.scss */
-  .grid__col--4 {
-    width: 32%;
-  }
-  /* line 30, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_grid.scss */
-  .grid__col--5 {
-    width: 40.5%;
-  }
-  /* line 30, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_grid.scss */
-  .grid__col--6 {
-    width: 49%;
-  }
-  /* line 30, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_grid.scss */
-  .grid__col--7 {
-    width: 57.5%;
-  }
-  /* line 30, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_grid.scss */
-  .grid__col--8 {
-    width: 66%;
-  }
-  /* line 30, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_grid.scss */
-  .grid__col--9 {
-    width: 74.5%;
-  }
-  /* line 30, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_grid.scss */
-  .grid__col--10 {
-    width: 83%;
-  }
-  /* line 30, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_grid.scss */
-  .grid__col--11 {
-    width: 91.5%;
-  }
-  /* line 30, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_grid.scss */
-  .grid__col--12 {
-    width: 100%;
-  }
+/* line 21, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_grid.scss */
+--3.theme__colors {
+  background-color: #39add1;
 }
 
-@media (min-width: 1px) and (max-width: 768px) {
-  /* line 36, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_grid.scss */
-  [class^="grid__col--"] {
-    margin-top: 0.75em;
-    margin-bottom: 0.75em;
-  }
+/* line 27, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_grid.scss */
+--4.theme__colors {
+  background-color: #39add1;
 }
 
-@media (min-width: 769px) {
-  /* line 36, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_grid.scss */
-  [class^="grid__col--"] {
-    float: left;
-    min-height: 1px;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  /* line 60, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/utilities/_mixins.scss */
-  [class^="grid__col--"] + [class^="grid__col--"] {
-    margin-left: 2%;
-  }
-  /* line 47, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_grid.scss */
-  [class^="grid__col--"]:last-of-type {
-    float: right;
-  }
+/* line 33, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_grid.scss */
+--6.theme__colors {
+  background-color: #39add1;
 }
 
-/* line 54, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_grid.scss */
-.grid {
-  width: 90%;
-}
-
-/* line 58, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_grid.scss */
-[class*="grid__col--"] > .grid {
-  width: 100%;
-}
-
-@media (min-width: 1024px) {
-  /* line 54, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_grid.scss */
-  .grid {
-    max-width: 1050px;
-  }
-}
-
-/* line 67, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_grid.scss */
-.grid__row {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+/* line 48, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_grid.scss */
+--8.theme__colors {
+  background-color: #39add1;
 }
 
 /* line 2, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_images.scss */
@@ -301,29 +230,61 @@ p {
   margin-bottom: 1.5em;
   max-width: 100%;
   height: auto;
+  display: flex;
+  justify-content: center;
+  justify-content: center;
 }
 
-/* line 6, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_images.scss */
+/* line 9, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_images.scss */
 .img--frame {
   border: 1px solid #d6d7d9;
   padding: 0.75em;
 }
 
-/* line 10, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_images.scss */
+/* line 13, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_images.scss */
 .img--avatar {
   display: block;
   border-radius: 50%;
 }
 
-/* line 4, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_navigation.scss */
+/* line 18, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_images.scss */
+.img--logo {
+  padding-top: 20px;
+  display: block;
+  margin: auto;
+}
+
+/* line 27, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_images.scss */
+.grid_col a {
+  padding: 20px;
+}
+
+/* line 5, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_navigation.scss */
 .nav {
   margin-top: 1.25em;
   margin-bottom: 1.875em;
 }
 
-/* line 10, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_navigation.scss */
+/* line 12, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_navigation.scss */
 .nav__item a {
+  text-decoration: none;
   color: #797e83;
+}
+
+@media (min-width: 1024px) {
+  /* line 25, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_navigation.scss */
+  .grid_col--3 {
+    float: left;
+    width: 30%;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 31, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_navigation.scss */
+  .grid_col--9 {
+    float: right;
+    width: 75%;
+  }
 }
 
 /* line 3, C:/Users/rashe/Documents/code files/techdegree/techdegree-project-5-v1/scss/components/_typography.scss */

@@ -7,9 +7,7 @@
   &--warning,
   &--info{
     @extend %btn;
-    width: 90%;
-    height: 50px;
-    margin: 20px;
+    @extend %grid-sz;
     color:$white;
   }
 }

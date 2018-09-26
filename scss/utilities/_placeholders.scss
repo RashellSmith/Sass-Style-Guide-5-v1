@@ -36,21 +36,27 @@
 
 //nav Items
 
-%nav-item-horz{
+%nav-item-md{
   @include mq(medium){
-  display:inline-block;
+  display: inline-block;
   margin: 0 em(12px);
   }
 }
+%nav-item-lg{
+  @include mq(large){
+  display: inline-block;
+  margin: 0 em(12px);
+  }
+}
+
 %nav-item-link{
+  display: block;
   font-size: em(18px);
   font-weight: $font-weight--light;
-  display: block;
   padding: em(8px);
   border-bottom: 1px solid transparent;
   margin: auto;
-  text-decoration: none;
-  font: $font-stack-primary;
+  font-family: $font-stack-primary;
   @include mq(small){
     padding-top: em(14px, 18px);
     padding-bottom: em(14px, 18px);
@@ -82,20 +88,32 @@
   }
 }
 
-//panels
-%panel-default{
-  padding-top: em(30px);
-  padding-bottom: em(20px);
+//Grid
+%grid {
+  border-radius : $br--default;
+  width: 100%;
+  height: 50px;
+  margin: 20px;
 }
-%panel-padding{
-  padding-top: em(80px);
-  padding-bottom: em(34px);
-}
+// //panels
+// %panel-default{
+//   padding-top: em(30px);
+//   padding-bottom: em(20px);
+// }
+// %panel-padding{
+//   padding-top: em(80px);
+//   padding-bottom: em(34px);
+// }
 // center align
 %center-align {
 	text-align: center;
 }
-
+// sixing for Buttons/grid/nav elements
+%grid-sz{
+  width: 90%;
+  height: 50px;
+  margin: 20px;
+}
 // Center elements
 
 %centered {

@@ -1,18 +1,36 @@
 //==================================================
 //Nav
 //==================================================
+
 .nav{
   margin-top: em(20px);
   margin-bottom: em(30px);
+
 @include e(item){
-  @extend %nav-item-horz;
-  @extend %centered;
-  a{
-    @extend %nav-item-link;
-    color: palette(grey);
-    &:hover{
-      @extend %nav-item-on;
+  @extend %nav-item-md;
+  @extend %center-align;
+    a{
+      @extend %nav-item-link;
+      text-decoration: none;
+      color: palette(grey);
+      &:hover{
+        @extend %nav-item-on;
+      }
     }
+
+
   }
 }
-}
+
+.grid_col--3{
+    @include mq(large){
+    float: left;
+    width: 30%;
+    }
+  }
+.grid_col--9{
+    @include mq(large){
+    float: right;
+    width: 75%;
+    }
+  }
