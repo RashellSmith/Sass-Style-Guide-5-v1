@@ -42,15 +42,10 @@
   margin: 0 em(12px);
   }
 }
-%nav-item-lg{
-  @include mq(large){
-  display: inline-block;
-  margin: 0 em(12px);
-  }
-}
 
 %nav-item-link{
   display: block;
+  width: 100%;
   font-size: em(18px);
   font-weight: $font-weight--light;
   padding: em(8px);
@@ -88,6 +83,7 @@
   }
 }
 
+
 //Grid
 %grid {
   border-radius : $br--default;
@@ -95,25 +91,23 @@
   height: 50px;
   margin: 20px;
 }
-// //panels
-// %panel-default{
-//   padding-top: em(30px);
-//   padding-bottom: em(20px);
-// }
-// %panel-padding{
-//   padding-top: em(80px);
-//   padding-bottom: em(34px);
-// }
+
+// grid-btn
+%gridtab {
+padding: 15px 30px;
+border: 0;
+border-radius : $br--default;
+color: $white;
+font-size : em(14px);
+font-weight: $font-weight--medium;
+display: inline-block;
+
+}
 // center align
 %center-align {
 	text-align: center;
 }
-// sixing for Buttons/grid/nav elements
-%grid-sz{
-  width: 90%;
-  height: 50px;
-  margin: 20px;
-}
+
 // Center elements
 
 %centered {

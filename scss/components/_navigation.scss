@@ -1,10 +1,14 @@
 //==================================================
 //Nav
 //==================================================
-
+.grid_row{
+    display:flex;
+}
 .nav{
+  display: inline-block;
   margin-top: em(20px);
   margin-bottom: em(30px);
+  @extend %nav-item-link;
 
 @include e(item){
   @extend %nav-item-md;
@@ -13,6 +17,9 @@
       @extend %nav-item-link;
       text-decoration: none;
       color: palette(grey);
+      @include mq(large){
+        flex-direction: column;
+      }
       &:hover{
         @extend %nav-item-on;
       }
@@ -21,16 +28,3 @@
 
   }
 }
-
-.grid_col--3{
-    @include mq(large){
-    float: left;
-    width: 30%;
-    }
-  }
-.grid_col--9{
-    @include mq(large){
-    float: right;
-    width: 75%;
-    }
-  }

@@ -6,7 +6,6 @@
 ul {
   list-style: none;
   text-decoration: none;
-//TODO: fix text decoration
 }
 
 p {
@@ -15,4 +14,5 @@ p {
   line-height: (27px/ 18px);
   margin: 0 0 em(30px,18px);
   font-weight: $font-weight--light;
+  font-family: $font-stack-primary;
 }

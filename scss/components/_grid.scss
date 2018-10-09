@@ -1,117 +1,56 @@
 //==================================
 //Layout styles
 //==================================
+// Calculate grid columns
+@include mq(medium){
 
-.container{
-  @extend %centered;
-  @include grid(flex);
-  width: 90%;
-  flex-direction: column;
-  font-size: $base__font-size;
-  light-height: ($base__line/$base__font-size);
-  font-family: $font-stack-primary;
+@for $i from 1 through $g-col-count {
+
+  $context: g-context($g-col-width, $g-col-count, $g-gutter-width) !global;
+  $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
+
+  // Generate column modifier classes
+  .grid__col--#{$i} {
+    width: percentage($target / $context);
+  }
 }
-// .grid__col--6.theme__colors {
-//   background-color: $color-secondary;
-//
-// }
+}
+//column styles
+[class^="grid__col--"]{
+ @include mq(small){
+   margin-top:em(12px);
+   margin-bottom:em(12px);
+ }
+ @include mq(medium){
+   @include doubly(percentage($g-gutter-width/ $context));
+   float:left;
+   min-height: 1px;
+   padding-left:10px;
+   padding-right:10px;
+   &:last-of-type{
+     float:right;
+   }
+ }
+}
 
+// headline spacing
+h4.headline--secondary{
+  padding-top: 25px;
+  clear:both;
+}
 
+// Center page
+.container{
+  margin:  5%;
+}
 
-  &--3.theme__colors{
-    background-color: $color-secondary;
-    @extend %center-align;
-   @extend %grid;
-
-  }
-  &--4.theme__colors{
-    background-color: $color-secondary;
-    @extend %center-align;
-   @extend %grid;
-
-  }
-  &--6.theme__colors{
-    background-color: $color-secondary;
-    @extend %center-align;
-   @extend %grid;
-
-  }
-  &--5.theme__colors{
-    @extend %center-align;
-    @extend %grid;
-  }
-
-  &--7.theme__colors{
-    @extend %center-align;
-    @extend %grid;
-  }
-  &--8.theme__colors{
-    background-color: $color-secondary;
-    @extend %center-align;
-   @extend %grid;
-
-  }
-  &--9.theme__colors{
-    @extend %center-align;
-    @extend %grid;
-  }
-  &--12.theme__colors{
-    @extend %center-align;
-    @extend %grid;
-  }
-
- // Calculate grid columns
-// @include mq(medium){
-//
-//  @for $i from 1 through $g-col-count {
-//
-//    $context: g-context($g-col-width, $g-col-count, $g-gutter-width) !global;
-//    $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
-//
-//    // Generate column modifier classes
-//    .grid__col--#{$i} {
-//      width: percentage($target / $context);
-//    }
-//  }
-// }
-// //column styles
-// [class^="grid__col--"]{
-//   @include mq(small){
-//     margin-top:em(12px);
-//     margin-bottom:em(12px);
-//   }
-//   @include mq(medium){
-//     @include doubly(percentage($g-gutter-width/ $context));
-//     float:left;
-//     min-height: 1px;
-//     padding-left:10px;
-//     padding-right:10px;
-//     &:last-of-type{
-//       float:right;
-//     }
-//   }
-// }
-//
-// //grid containers
-// .grid{
-//   @extend %clearfix;
-//   width:90%;
-//   // Make nested grid 100%
-//   [class*="grid__col--"]> & {
-//     width: 100%;
-//   }
-//   //set a max-width for grid containers
-//   @include mq(large){
-//     max-width: $g-cont-max-w;
-//   }
-// }
-//
-// .grid__row{
-//   @include grid($flex){
-//     @extend %centered;
-//     @extend %btn;
-//     width: 90%;
-//     color: palette(black,base);
-//     flex-direction: column;
-//   }
-// }
+//Buttons
+.theme__colors.grid__col{
+  &--12 {@extend %grid;@extend %gridtab; background-color:lighten($emerald, 10%);}
+  &--4 {@extend %grid;@extend %gridtab; background-color:$scooter ;}
+  &--3 {@extend %grid;@extend %gridtab; background-color:$purple-majesty ;}
+  &--5 {@extend %grid;@extend %gridtab; background-color:$emerald;}
+  &--8 {@extend %grid;@extend %gridtab; background-color:$coral;}
+  &--7 {@extend %grid;@extend %gridtab; background-color:$sunglo;}
+  &--6 {@extend %grid;@extend %gridtab; background-color:$fountain-blue ; width:50%;}
+}

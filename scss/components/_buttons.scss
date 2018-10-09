@@ -7,7 +7,11 @@
   &--warning,
   &--info{
     @extend %btn;
-    @extend %grid-sz;
+    @extend %grid;
     color:$white;
+    @include mq(large){
+      display: inline-block;
+      width: 10%;
+    }
   }
 }
