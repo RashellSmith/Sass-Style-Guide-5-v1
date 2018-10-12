@@ -87,21 +87,18 @@
 //Grid
 %grid {
   border-radius : $br--default;
-  width: 100%;
   height: 50px;
-  margin: 20px;
+  margin: 5px;
 }
 
 // grid-btn
 %gridtab {
-padding: 15px 30px;
-border: 0;
-border-radius : $br--default;
-color: $white;
 font-size : em(14px);
 font-weight: $font-weight--medium;
+text-align: center;
 display: inline-block;
-
+padding-top: 15px;
+color: $white;
 }
 // center align
 %center-align {
@@ -112,6 +109,6 @@ display: inline-block;
 
 %centered {
 	float: none;
-	margin-left: auto;
-	margin-right: auto;
+	// margin-left: auto;
+	// margin-right: auto;
 }

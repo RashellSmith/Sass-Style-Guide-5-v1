@@ -2,8 +2,24 @@
 //Layout styles
 //==================================
 // Calculate grid columns
+[class*="grid_col--"]{
+  width: 100%;
+}
+.grid__row {
+  display: flex;
+}
 @include mq(medium){
+  [class^="grid__col--"]:last-of-type {
+  float: none !important;
+  margin: auto;
 
+}
+.grid__row {
+  flex-direction: row;
+}
+ .centered .grid__col--7{
+   margin: 0 auto;
+ }
 @for $i from 1 through $g-col-count {
 
   $context: g-context($g-col-width, $g-col-count, $g-gutter-width) !global;
@@ -46,11 +62,13 @@ h4.headline--secondary{
 
 //Buttons
 .theme__colors.grid__col{
-  &--12 {@extend %grid;@extend %gridtab; background-color:lighten($emerald, 10%);}
-  &--4 {@extend %grid;@extend %gridtab; background-color:$scooter ;}
-  &--3 {@extend %grid;@extend %gridtab; background-color:$purple-majesty ;}
-  &--5 {@extend %grid;@extend %gridtab; background-color:$emerald;}
+
+  &--12 {@extend %grid;@extend %gridtab;background-color:lighten($emerald, 10%);}
+  &--4 {@extend %grid;@extend %gridtab;background-color:$scooter;}
+  &--3 {@extend %grid;@extend %gridtab; background-color:$purple-majesty;}
+  &--5 {@extend %grid;@extend %gridtab; background-color:$emerald; }
   &--8 {@extend %grid;@extend %gridtab; background-color:$coral;}
   &--7 {@extend %grid;@extend %gridtab; background-color:$sunglo;}
-  &--6 {@extend %grid;@extend %gridtab; background-color:$fountain-blue ; width:50%;}
+  &--6 {@extend %grid;@extend %gridtab; background-color:$fountain-blue ; }
+
 }

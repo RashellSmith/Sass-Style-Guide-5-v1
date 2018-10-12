@@ -25,6 +25,13 @@
   }
   @include e(btn){
   @extend %btn;
+  @include mq(large){
+  width: 100%;}
   background: $color-primary;
+  }
+  .btn--default{
+    @include mq(large){
+    width: 100%;}
+    background: $color-primary;
   }
 }
