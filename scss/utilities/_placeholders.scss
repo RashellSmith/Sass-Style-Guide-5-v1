@@ -96,6 +96,7 @@
 font-size : em(14px);
 font-weight: $font-weight--medium;
 text-align: center;
+
 padding-top: 15px;
 color: $white;
 }
@@ -108,6 +109,16 @@ color: $white;
 
 %centered {
 	float: none;
-	// margin-left: auto;
-	// margin-right: auto;
+}
+
+//images
+%img{
+  margin-bottom: em(24px);
+  max-width: 100%;
+  height:auto;
+}
+
+%links{
+  color: $fountain-blue;
+  text-decoration: none;
 }

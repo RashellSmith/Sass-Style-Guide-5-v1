@@ -3,15 +3,18 @@
 //==================================
 // Calculate grid columns
 [class*="grid_col--"]{
-  display:block;
   width: 100%;
 }
-
+.grid__row {
+  margin-bottom: 50px;
+}
 @include mq(medium){
   [class^="grid__col--"]:last-of-type {
   float: none !important;
   margin: auto;
-
+}
+.grid__row {
+  @include grid(flex);
 }
 
  .centered .grid__col--7{

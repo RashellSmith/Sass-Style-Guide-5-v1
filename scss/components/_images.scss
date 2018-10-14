@@ -1,29 +1,33 @@
 //Images
 .img {
   @extend %centered;
-  margin-bottom: em(24px);
-  max-width: 100%;
-  height:auto;
-  @include grid(flex);
-  justify-content: center;
+  @extend %img;
   &--frame {
     border: 1px solid palette(grey,x-light);
     padding: em(12px);
+    @include mq(small){
+      margin: auto;
+      display: block;
+    }
   }
   &--avatar{
-    display:block;
+    // display:block;
     border-radius:$br--round;
-
+    margin: auto;
   }
   &--logo{
     padding-top: 20px;
-    display: block;
+    // display: block;
     margin: auto;
 
   }
 }
 
-.grid_col a{
-  padding: 20px;
 
+// *2nd nested element to adress .img--frame
+// and the .img--avatar overlapping*
+.grid__col--6{
+  .img--avatar{
+    margin-left: 150px;
+  }
 }

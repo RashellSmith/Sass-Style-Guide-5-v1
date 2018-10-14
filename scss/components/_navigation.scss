@@ -1,9 +1,7 @@
 //==================================================
 //Nav
 //==================================================
-.grid_row{
-    display:flex;
-}
+
 .nav{
   display: inline-block;
   margin-top: em(20px);
@@ -17,9 +15,7 @@
       @extend %nav-item-link;
       text-decoration: none;
       color: palette(grey);
-      @include mq(large){
-        flex-direction: column;
-      }
+
       &:hover{
         @extend %nav-item-on;
       }
@@ -27,4 +23,5 @@
 
 
   }
+
 }
