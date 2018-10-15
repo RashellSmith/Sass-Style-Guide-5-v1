@@ -519,6 +519,7 @@ template {
 }
 
 .form .btn--default {
+  margin: auto;
   background: #52bab3;
 }
 
